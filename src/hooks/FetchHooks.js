@@ -8,6 +8,8 @@ const FetchHooks = (url)=>{
         .then(data=>setData(data))
         .catch(err=>console.log(err))
     },[])
+
+
     return [datas] 
 }
 

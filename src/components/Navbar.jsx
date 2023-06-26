@@ -1,11 +1,14 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import { Navs } from "../utils/Constants"
 import logo from '../assets/react.svg'
 import { FaCartShopping } from "react-icons/fa6";
 
+import { useSelector } from "react-redux";
+
 const Navbar = () => {
 
-
+    const count = useSelector((state)=>state.shop.count)
+const navigate = useNavigate()
 
     const styles = ({ isActive }) => {
         return {
@@ -26,9 +29,9 @@ const Navbar = () => {
                         </li>
                     )
                 })}
-                <FaCartShopping className="mt-1 ml-10 text-[29px]" />
-                <span className='bg-red-500 rounded-3xl h-[20px] w-[20px] mx-auto  ml-[-6px] mt-[-5px] text-white'>
-                    <p className="ml-[5px] mt-[-5px]">0</p>
+                <FaCartShopping onClick={()=>navigate("/shop")} className="mt-1 pointer ml-10 text-[29px]" />
+                <span  className=' bg-red-500 rounded-3xl h-[20px] w-[20px] mx-auto  ml-[-6px] mt-[-5px] text-white'>
+                    <p className="ml-[5px] mt-[-5px]">{count}</p>
                 </span>
             </ul>
         </nav>

@@ -6,7 +6,7 @@ const Form = React.lazy(()=>import("../components/Form"))
 const NotFound = React.lazy(()=>import("../components/NotFound"))
 const Table = React.lazy(()=>import("../components/Table"))
 const KorzinaCart = React.lazy(()=>import("../components/Korzina/Karzina"))
-
+const Shop = React.lazy(()=>import("../pages/Shop"))
 
 
 export const RenderRoute  = [
@@ -31,6 +31,11 @@ export const RenderRoute  = [
         id:4,
         component:KorzinaCart,
         path:"/korzina"
+    },
+    {
+        id:5,
+        component:Shop,
+        path:"/shop"
     },
   
     {

@@ -4,8 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import 'virtual:windi.css'
 
+import { Provider } from 'react-redux'
+
+import store from './redux/store.js'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
   <Router>
     <App />
   </Router>
+  </Provider>
 )
