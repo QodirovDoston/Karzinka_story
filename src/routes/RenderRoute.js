@@ -2,10 +2,9 @@
 import React from "react";
 
 const Card = React.lazy(()=>import("../components/Card"))
-const Form = React.lazy(()=>import("../components/Form"))
-const NotFound = React.lazy(()=>import("../components/NotFound"))
-const Table = React.lazy(()=>import("../components/Table"))
-const KorzinaCart = React.lazy(()=>import("../components/Korzina/Karzina"))
+const Form = React.lazy(()=>import("../pages/Form"))
+const NotFound = React.lazy(()=>import("../pages/NotFound"))
+const Table = React.lazy(()=>import("../pages/Table"))
 const Shop = React.lazy(()=>import("../pages/Shop"))
 
 
@@ -27,13 +26,9 @@ export const RenderRoute  = [
         path:"/table"
     },
 
+   
     {
         id:4,
-        component:KorzinaCart,
-        path:"/korzina"
-    },
-    {
-        id:5,
         component:Shop,
         path:"/shop"
     },

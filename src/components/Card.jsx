@@ -2,9 +2,9 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { useDispatch } from "react-redux"
 import { addCard , count } from "../redux/feature/ShopSlice"
+
 const Card = () => {
   const [title, setAnswer] = useState([])
-  const [ data,setData] = useState()
   const dispatch = useDispatch()
   const FetchingData = ()=>{
     axios.get("https://rasm-uchun.onrender.com/data")
@@ -16,9 +16,8 @@ const Card = () => {
   },[])
 
 
-  // console.log(title);
 
-  const handleClick = (e,id)=>{
+  const handleClick = (e)=>{
     dispatch(addCard(e))
     dispatch(count())
   }
